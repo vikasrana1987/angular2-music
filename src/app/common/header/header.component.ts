@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class HeaderComponent {
+  private sidebarClosed: boolean = true;
   constructor() {
-      // do stuff
+
+  }
+
+  private toggleSidebar() {
+     this.sidebarClosed = !this.sidebarClosed;
   }
 }
