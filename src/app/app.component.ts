@@ -4,9 +4,12 @@
 import {
   Component,
   OnInit,
+  ChangeDetectionStrategy,
   ViewEncapsulation
 } from '@angular/core';
 import { AppState } from './app.service';
+
+import { TranslateService } from '@ngx-translate/core';
 
 /*
  * App Component
@@ -15,6 +18,7 @@ import { AppState } from './app.service';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: [
     './app.component.css'
   ],
@@ -26,8 +30,14 @@ export class AppComponent implements OnInit {
   public url = 'https://twitter.com/AngularClass';
 
   constructor(
-    public appState: AppState
-  ) {}
+    public appState: AppState,
+    private translate: TranslateService
+  ) {
+    translate.addLangs(['en', 'fr']);
+    translate.setDefaultLang('en');
+    let browserLang: string = translate.getBrowserLang();
+    translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+  }
 
   public ngOnInit() {
     console.log('Initial App State', this.appState.state);

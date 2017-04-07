@@ -1,0 +1,6 @@
+{
+  "HEADER": {
+    "SEARCH_SONGS": "Search songs, albums... sdd"
+  },
+  "LAZY": "Je suis chargé de façon asynchrone (lazy load)!"
+}
