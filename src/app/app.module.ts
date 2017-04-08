@@ -29,7 +29,7 @@ import { AppState, InternalStateType } from './app.service';
 import { HeaderComponent } from './common/header/header.component';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { HomeComponent } from './home';
-import { AboutComponent } from './about';
+import { GenresComponent } from './genres';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 import { SidebarService } from './shared';
@@ -57,8 +57,8 @@ type StoreType = {
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    AboutComponent,
     HomeComponent,
+    GenresComponent,
     NoContentComponent,
     XLargeDirective
   ],

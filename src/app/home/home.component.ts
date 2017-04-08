@@ -28,7 +28,9 @@ export class HomeComponent implements OnInit {
   constructor(
     public appState: AppState,
     public title: Title
-  ) {}
+  ) {
+    // Do stuff
+  }
   
   public ngOnInit() {
     // this.title.getData().subscribe(data => this.data = data);
