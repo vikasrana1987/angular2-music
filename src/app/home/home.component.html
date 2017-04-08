@@ -3,7 +3,7 @@
     <section>
         <section class="hbox stretch">
             <!-- .aside -->
-            <aside class="bg-black dk nav-xs aside hidden-print" id="nav">
+            <aside class="bg-black dk aside hidden-print" id="nav" [ngClass]="{'nav-xs': sidebarClosed}">
                 <section class="vbox">
                     <my-sidebar></my-sidebar>
                     <footer class="footer hidden-xs no-padder text-center-nav-xs">

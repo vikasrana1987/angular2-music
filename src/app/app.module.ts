@@ -32,12 +32,13 @@ import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
-
+import { SidebarService } from './shared';
 import '../styles/styles.scss';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
+  SidebarService,
   AppState
 ];
 
