@@ -15230,3 +15230,12 @@ fieldset[disabled] .i-checks input+i:before {
         height: 65%;
     }
 }
+
+
+/* Vikas Rana */
+
+.hbox.stretch>div {
+    display: table;
+    height: 100%;
+    width: 100%;
+}

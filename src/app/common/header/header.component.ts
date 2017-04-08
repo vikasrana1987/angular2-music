@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SidebarService } from './../../shared';
 
 @Component({
-  selector: 'my-header',
+  selector: '[my-header]',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

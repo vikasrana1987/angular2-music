@@ -8,6 +8,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { AppState } from './app.service';
+import { SidebarService } from './shared';
 
 import { TranslateService } from '@ngx-translate/core';
 
@@ -28,11 +29,22 @@ export class AppComponent implements OnInit {
   public angularclassLogo = 'assets/img/angularclass-avatar.png';
   public name = 'Angular 2 Webpack Starter';
   public url = 'https://twitter.com/AngularClass';
+  public sidebarClosed: boolean = true;
 
   constructor(
     public appState: AppState,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private sidebarService: SidebarService
   ) {
+    console.log(sidebarService.sidebarToggled$);
+    sidebarService.sidebarToggled$.subscribe((data) => {
+      console.log('Subscription got', data); // Subscription wont get
+      this.sidebarClosed = !this.sidebarClosed;
+    }, (error) => {
+      console.log(error);
+    }, () => {
+      console.log('completed');
+    });
     translate.addLangs(['en', 'fr']);
     translate.setDefaultLang('en');
     let browserLang: string = translate.getBrowserLang();
