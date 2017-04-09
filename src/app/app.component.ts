@@ -4,7 +4,7 @@
 import {
   Component,
   OnInit,
-  ChangeDetectionStrategy,
+  //ChangeDetectionStrategy,
   ViewEncapsulation
 } from '@angular/core';
 import { AppState } from './app.service';
@@ -19,7 +19,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  //changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: [
     './app.component.css'
   ],
