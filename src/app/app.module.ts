@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { TranslateModule } from '@ngx-translate/core';
+import { HttpModule, Http } from '@angular/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import {
   NgModule,
@@ -33,12 +34,14 @@ import { GenresComponent } from './genres';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 import { SidebarService } from './shared';
+import { AlbumService } from './_services';
 import '../styles/styles.scss';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   SidebarService,
+  AlbumService,
   AppState
 ];
 
@@ -47,6 +50,10 @@ type StoreType = {
   restoreInputValues: () => void,
   disposeOldHosts: () => void
 };
+
+export function createTranslateLoader(http: Http) {
+    return new TranslateHttpLoader(http, './i18n/', '.json');
+}
 
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
@@ -66,7 +73,13 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
-    TranslateModule.forRoot(),
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: (createTranslateLoader),
+            deps: [Http]
+        }
+    }),
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
