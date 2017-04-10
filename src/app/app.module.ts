@@ -31,6 +31,10 @@ import { HeaderComponent } from './common/header/header.component';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { HomeComponent } from './home';
 import { GenresComponent } from './genres';
+import { EventsComponent } from './events';
+import { ListenComponent } from './listen';
+import { VideosComponent } from './videos';
+
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 import { SidebarService } from './shared';
@@ -66,6 +70,9 @@ export function createTranslateLoader(http: Http) {
     SidebarComponent,
     HomeComponent,
     GenresComponent,
+    EventsComponent,
+    ListenComponent,
+    VideosComponent,
     NoContentComponent,
     XLargeDirective
   ],
