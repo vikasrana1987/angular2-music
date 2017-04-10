@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MasonryModule } from 'angular2-masonry';
 
 import {
   NgModule,
@@ -80,6 +81,7 @@ export function createTranslateLoader(http: Http) {
     BrowserModule,
     FormsModule,
     HttpModule,
+    MasonryModule,
     TranslateModule.forRoot({
         loader: {
             provide: TranslateLoader,
