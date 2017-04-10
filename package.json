@@ -162,10 +162,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angularclass/angular2-webpack-starter.git"
+    "url": "https://github.com/vikasrana1987/angular2-music.git"
   },
   "bugs": {
-    "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
+    "url": "https://github.com/vikasrana1987/angular2-music/issues"
   },
   "engines": {
     "node": ">= 4.2.1",
