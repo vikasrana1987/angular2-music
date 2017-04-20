@@ -35,11 +35,15 @@ import { GenresComponent } from './genres';
 import { EventsComponent } from './events';
 import { ListenComponent } from './listen';
 import { VideosComponent } from './videos';
+import { VideoDetailComponent } from './videos/video-detail';
 
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 import { SidebarService } from './shared';
-import { AlbumService } from './_services';
+import { AlbumService, VideoService } from './_services';
+
+import { YoutubeSafeUrlPipe } from "./_pipes/youtube-safe-url.pipe";
+
 import '../styles/styles.scss';
 
 // Application wide providers
@@ -47,6 +51,7 @@ const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   SidebarService,
   AlbumService,
+  VideoService,
   AppState
 ];
 
@@ -74,8 +79,10 @@ export function createTranslateLoader(http: Http) {
     EventsComponent,
     ListenComponent,
     VideosComponent,
+    VideoDetailComponent,
     NoContentComponent,
-    XLargeDirective
+    XLargeDirective,
+    YoutubeSafeUrlPipe
   ],
   imports: [ // import Angular's modules
     BrowserModule,

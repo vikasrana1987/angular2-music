@@ -13,13 +13,11 @@ import { AlbumService } from '../_services';
 })
 export class HomeComponent implements OnInit {
   public albums: Album[] = [];
-  
   constructor(
     private albumService: AlbumService
   ) {
     // Do stuff
   }
-  
   public ngOnInit() {
      this.getAlbums();
   }
@@ -29,10 +27,9 @@ export class HomeComponent implements OnInit {
         .subscribe(
             data => {
                this.albums = data;
-               console.log(this.albums)
             },
             error => {
-               console.log(error);
+               // console.log(error);
             });
   }
 }
