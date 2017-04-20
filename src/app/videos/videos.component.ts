@@ -22,7 +22,7 @@ export class VideosComponent implements OnInit {
   }
 
   getVideos(){
-    this.videoService.fetchVideos('typescript')
+    this.videoService.fetchVideos('punjabi movies')
       .subscribe(data => {
         this.videos = data.items.map(item => {
           return new Video(

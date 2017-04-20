@@ -15239,3 +15239,7 @@ fieldset[disabled] .i-checks input+i:before {
     height: 100%;
     width: 100%;
 }
+
+.ngx-pagination {
+    padding-left: 0;
+}

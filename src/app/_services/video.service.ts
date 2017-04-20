@@ -13,7 +13,16 @@ export class VideoService {
       .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}`+
           '&maxResults=50' +
           '&type=video' +
-          '&key=AIzaSyAARhzDEdAwaIYKelgTmVa8Nez5sLKjBcM')
+          '&key=AIzaSyCQ8lm5q5RAMbT8SR9gEyxfFCwaSrAzfw0')
+      .map(response => response.json())
+  }
+
+  fetchRelatedVideos(query: string) {
+    return this.http
+      .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&relatedToVideoId=${query}`+
+          '&maxResults=3' +
+          '&type=video' +
+          '&key=AIzaSyCQ8lm5q5RAMbT8SR9gEyxfFCwaSrAzfw0')
       .map(response => response.json())
   }
 }

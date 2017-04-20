@@ -19,6 +19,8 @@ import {
   PreloadAllModules
 } from '@angular/router';
 
+import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
+
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -89,6 +91,7 @@ export function createTranslateLoader(http: Http) {
     FormsModule,
     HttpModule,
     MasonryModule,
+    NgxPaginationModule,
     TranslateModule.forRoot({
         loader: {
             provide: TranslateLoader,
