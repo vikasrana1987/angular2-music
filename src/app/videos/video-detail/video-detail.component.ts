@@ -1,6 +1,7 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  OnDestroy
 } from '@angular/core';
 import {
   Router,
@@ -19,7 +20,7 @@ import { VideoService } from './../../_services';
 export class VideoDetailComponent implements OnInit {
   private sub: any;
   private videoId;
-  videos:Video[] = [];
+  videos: Video[] = [];
 
   constructor(private activatedRoute: ActivatedRoute,
       private videoService: VideoService
@@ -34,18 +35,18 @@ export class VideoDetailComponent implements OnInit {
     });
   }
 
-  getVideos(videoId){
+  getVideos(videoId) {
     this.videoService.fetchRelatedVideos(videoId)
       .subscribe(data => {
         this.videos = data.items.map(item => {
           return new Video(
             item.id.videoId,
             item.snippet.title,
-            item.snippet.thumbnails.high.url,
+            item.snippet.thumbnails.medium.url,
             item.snippet.channelTitle,
             item.snippet.channelId,
             item.snippet.publishedAt,
-            item.snippet.description)
+            item.snippet.description);
         });
       });
   }

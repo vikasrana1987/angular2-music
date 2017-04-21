@@ -12,7 +12,7 @@ import { VideoService } from '../_services';
   templateUrl: './videos.component.html'
 })
 export class VideosComponent implements OnInit {
-  videos:Video[] = [];
+  videos: Video[] = [];
   constructor(private videoService: VideoService) {
     // Do stuff
   }
@@ -21,20 +21,19 @@ export class VideosComponent implements OnInit {
     this.getVideos();
   }
 
-  getVideos(){
+  getVideos() {
     this.videoService.fetchVideos('punjabi movies')
       .subscribe(data => {
         this.videos = data.items.map(item => {
           return new Video(
             item.id.videoId,
             item.snippet.title,
-            item.snippet.thumbnails.high.url,
+            item.snippet.thumbnails.medium.url,
             item.snippet.channelTitle,
             item.snippet.channelId,
             item.snippet.publishedAt,
-            item.snippet.description)
+            item.snippet.description);
         });
-        //this.appState.activeVideo = this.appState.videoList[0];
       });
   }
 }
