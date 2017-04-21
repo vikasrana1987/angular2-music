@@ -5,6 +5,8 @@ import { EventsComponent } from './events';
 import { ListenComponent } from './listen';
 import { VideosComponent } from './videos';
 import { VideoDetailComponent } from './videos/video-detail';
+import { SigninComponent } from './signin';
+import { SignupComponent } from './signup';
 
 import { NoContentComponent } from './no-content';
 
@@ -18,5 +20,7 @@ export const ROUTES: Routes = [
   { path: 'listen',  component: ListenComponent },
   { path: 'videos',  component: VideosComponent },
   { path: 'video/:id', component: VideoDetailComponent },
+  { path: "signin", component: SigninComponent },
+  { path: "signup", component: SignupComponent },
   { path: '**',    component: NoContentComponent },
 ];

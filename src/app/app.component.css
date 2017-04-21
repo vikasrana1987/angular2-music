@@ -15243,3 +15243,28 @@ fieldset[disabled] .i-checks input+i:before {
 .ngx-pagination {
     padding-left: 0;
 }
+
+.modal.route-modal.in.fade {
+    background-color: rgba(231, 231, 231, 0.3);
+}
+
+.signin-page .modal-header,
+.signup-page .modal-header {
+    border: none;
+}
+
+.signin-page .modal-content,
+.signup-page .modal-content {
+    background-color: #4cb6cb;
+    color: #eaf6f9;
+}
+
+.signin-page .modal-body,
+.signup-page .modal-body {
+    padding: 0;
+}
+
+.signin-page .modal-footer,
+.signup-page .modal-footer {
+    display: none;
+}

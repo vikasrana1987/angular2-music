@@ -4,6 +4,7 @@ import { HttpModule, Http } from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MasonryModule } from 'angular2-masonry';
+import { ModalModule } from "ngx-modal";
 
 import {
   NgModule,
@@ -38,6 +39,8 @@ import { EventsComponent } from './events';
 import { ListenComponent } from './listen';
 import { VideosComponent } from './videos';
 import { VideoDetailComponent } from './videos/video-detail';
+import { SigninComponent } from './signin';
+import { SignupComponent } from './signup';
 
 import { NoContentComponent } from './no-content';
 import { SidebarService } from './shared';
@@ -81,6 +84,8 @@ export function createTranslateLoader(http: Http) {
     ListenComponent,
     VideosComponent,
     VideoDetailComponent,
+    SigninComponent,
+    SignupComponent,
     NoContentComponent,
     YoutubeSafeUrlPipe
   ],
@@ -90,6 +95,7 @@ export function createTranslateLoader(http: Http) {
     HttpModule,
     MasonryModule,
     NgxPaginationModule,
+    ModalModule,
     TranslateModule.forRoot({
         loader: {
             provide: TranslateLoader,

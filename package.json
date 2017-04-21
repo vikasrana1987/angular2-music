@@ -91,6 +91,7 @@
     "jasmine-core": "^2.5.2",
     "jsonwebtoken": "^7.3.0",
     "mysql": "^2.13.0",
+    "ngx-modal": "0.0.29",
     "ngx-pagination": "^3.0.0",
     "password-hash": "^1.2.2",
     "reflect-metadata": "^0.1.9",
