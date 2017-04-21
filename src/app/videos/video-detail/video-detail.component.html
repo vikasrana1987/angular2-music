@@ -1,7 +1,7 @@
 <section class="vbox" id="bjax-el">
     <section class="scrollable padder-lg">
         <h2 class="font-thin m-b">Video</h2>
-        <iframe width="100%" height="500" frameborder="0" allowfullscreen [src]="videoId | youtubeSafeUrl">
+        <iframe width="100%" height="500" frameborder="0" allowfullscreen [src]="videoId | myYoutubeSafeUrl">
         </iframe>
         <h2 class="font-thin m-b">Related Videos</h2>
         <div class="row row-sm" *ngIf="videos.length > 0">

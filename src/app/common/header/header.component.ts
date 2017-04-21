@@ -8,7 +8,7 @@ import { SidebarService } from './../../shared';
 })
 
 export class HeaderComponent {
-  public sidebarClosed: boolean = true;
+  public sidebarClosed = true;
   constructor(private sidebarService: SidebarService) {
     //
   }

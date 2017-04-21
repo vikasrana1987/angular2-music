@@ -4,7 +4,7 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: '[my-listen]',  // <home></home>
+  selector: '[my-listen]',
   styleUrls: [ './listen.component.css' ],
   templateUrl: './listen.component.html'
 })
@@ -14,6 +14,6 @@ export class ListenComponent implements OnInit {
   }
 
   public ngOnInit() {
-    
+
   }
 }

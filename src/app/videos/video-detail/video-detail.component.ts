@@ -19,7 +19,7 @@ import { VideoService } from './../../_services';
 })
 export class VideoDetailComponent implements OnInit {
   private sub: any;
-  private videoId;
+  public videoId;
   videos: Video[] = [];
 
   constructor(private activatedRoute: ActivatedRoute,

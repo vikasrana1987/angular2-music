@@ -26,6 +26,6 @@ export class EventsComponent implements OnInit {
       {title: 'Event 4'},
       {title: 'Event 5'},
       {title: 'Event 6'}
-    ]
+    ];
   }
 }

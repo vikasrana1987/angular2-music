@@ -4,7 +4,7 @@
 import {
   Component,
   OnInit,
-  //ChangeDetectionStrategy,
+  // ChangeDetectionStrategy,
   ViewEncapsulation
 } from '@angular/core';
 import { AppState } from './app.service';
@@ -17,9 +17,9 @@ import { TranslateService } from '@ngx-translate/core';
  * Top Level Component
  */
 @Component({
-  selector: 'app',
+  selector: 'my-app',
   encapsulation: ViewEncapsulation.None,
-  //changeDetection: ChangeDetectionStrategy.OnPush,
+  // changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: [
     './app.component.css'
   ],
@@ -27,7 +27,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent implements OnInit {
   public name = 'Angular 2 Webpack Starter';
-  public sidebarClosed: boolean = true;
+  public sidebarClosed = true;
 
   constructor(
     public appState: AppState,

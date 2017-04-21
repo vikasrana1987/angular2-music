@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Pipe({
-  name: 'youtubeSafeUrl'
+  name: 'myYoutubeSafeUrl'
 })
 export class YoutubeSafeUrlPipe implements PipeTransform {
 

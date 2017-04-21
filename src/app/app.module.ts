@@ -19,7 +19,7 @@ import {
   PreloadAllModules
 } from '@angular/router';
 
-import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
+import { NgxPaginationModule } from 'ngx-pagination'; // <-- import the module
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -40,11 +40,10 @@ import { VideosComponent } from './videos';
 import { VideoDetailComponent } from './videos/video-detail';
 
 import { NoContentComponent } from './no-content';
-import { XLargeDirective } from './home/x-large';
 import { SidebarService } from './shared';
 import { AlbumService, VideoService } from './_services';
 
-import { YoutubeSafeUrlPipe } from "./_pipes/youtube-safe-url.pipe";
+import { YoutubeSafeUrlPipe } from './_pipes/youtube-safe-url.pipe';
 
 import '../styles/styles.scss';
 
@@ -83,7 +82,6 @@ export function createTranslateLoader(http: Http) {
     VideosComponent,
     VideoDetailComponent,
     NoContentComponent,
-    XLargeDirective,
     YoutubeSafeUrlPipe
   ],
   imports: [ // import Angular's modules
