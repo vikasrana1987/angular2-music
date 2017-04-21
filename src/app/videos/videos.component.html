@@ -46,7 +46,7 @@
         </div>
         <h3 class="font-thin m-b">Video List</h3>
         <div class="row row-sm" *ngIf="videos.length > 0">
-            <div class="col-xs-6 col-sm-4 col-md-3" *ngFor="let video of videos | paginate: {itemsPerPage: 5, currentPage: p}">
+            <div class="col-xs-6 col-sm-4 col-md-3" *ngFor="let video of videos | paginate: {itemsPerPage: 8, currentPage: p}">
                 <div class="item">
                     <div class="pos-rlt">
                         <div class="item-overlay opacity r r-2x bg-black">
