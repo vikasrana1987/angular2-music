@@ -13,11 +13,13 @@ import { VideoService } from '../_services';
 })
 export class VideosComponent implements OnInit {
   videos: Video[] = [];
+  isLoading: boolean;
   constructor(private videoService: VideoService) {
     // Do stuff
   }
 
   public ngOnInit() {
+    this.isLoading = true;
     this.getVideos();
   }
 
@@ -34,6 +36,11 @@ export class VideosComponent implements OnInit {
             item.snippet.publishedAt,
             item.snippet.description);
         });
+        this.isLoading = false;
+      },
+      error => {
+        this.isLoading = false;
+        //this.alertService.error(error);
       });
   }
 }

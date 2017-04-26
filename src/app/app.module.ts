@@ -5,6 +5,8 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MasonryModule } from 'angular2-masonry';
 import { ModalModule } from 'ngx-modal';
+import { NgSpinKitModule } from 'ng-spin-kit'
+
 
 import {
   NgModule,
@@ -98,6 +100,7 @@ export function createTranslateLoader(http: Http) {
     MasonryModule,
     NgxPaginationModule,
     ModalModule,
+    NgSpinKitModule,
     TranslateModule.forRoot({
         loader: {
             provide: TranslateLoader,

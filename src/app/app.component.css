@@ -15278,3 +15278,7 @@ fieldset[disabled] .i-checks input+i:before {
 .signup-page a {
     color: #fff;
 }
+
+.rotating-plane-spinner {
+    background-color: #c6c6c6!important;
+}
