@@ -4,6 +4,10 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { decorateModuleRef } from './app/environment';
 import { bootloader } from '@angularclass/hmr';
+
+import 'jquery';
+import '../src/assets/js/jquery.jplayer.min.js'; 
+import '../src/assets/js/jplayer.playlist.min.js';
 /*
  * App Module
  * our top level module that holds all of our components

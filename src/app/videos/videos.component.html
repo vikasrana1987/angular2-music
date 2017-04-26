@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <pagination-controls (pageChange)="p = $event">
+        <pagination-controls *ngIf="videos.length > 0" (pageChange)="p = $event">
             <ul class="pagination">
                 <li><a href="#"><i class="fa fa-chevron-left"></i></a>
                 </li>

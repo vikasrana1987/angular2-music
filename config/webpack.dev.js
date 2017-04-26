@@ -11,6 +11,7 @@ const commonConfig = require('./webpack.common.js'); // the settings that are co
  * Webpack Plugins
  */
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
+const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
@@ -132,7 +133,11 @@ module.exports = function (options) {
     },
 
     plugins: [
-
+       new ProvidePlugin({
+		  jQuery: 'jquery',
+		  $: 'jquery',
+		  jquery: 'jquery'
+		}),
       /**
        * Plugin: DefinePlugin
        * Description: Define free variables.
