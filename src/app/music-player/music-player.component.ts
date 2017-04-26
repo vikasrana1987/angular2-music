@@ -11,6 +11,7 @@ import {
 })
 export class MusicPlayerComponent implements OnInit {
   myPlaylist: any;
+  showPlaylist: boolean;
   constructor() {
     // Do stuff
   }
@@ -57,6 +58,13 @@ export class MusicPlayerComponent implements OnInit {
         keyEnabled: true,
         audioFullScreen: false
       });
+       $(document).on('click', ".playlist",  function(){
+          $('#playlist').toggleClass('open');
+      });
      });
+
+    
   }
+
+  
 }
